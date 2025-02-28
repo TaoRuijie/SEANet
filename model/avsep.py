@@ -965,7 +965,7 @@ class Cross_Sepformer(nn.Module):
 
 
 def avsep(kernel_size=16, N_encoder_out=256, num_spks=1):
-    # The original model is too large for my GPU, so I reduce the number of layers
+    # The original model is too large for my GPU, so I reduce the number of layers, while still larger than the SEANet
     InterSeparator = CrossTransformerBlock(num_layers=6,
                                            d_model=N_encoder_out,
                                            nhead=8,

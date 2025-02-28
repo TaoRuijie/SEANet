@@ -237,7 +237,7 @@ class Cross_layer(nn.Module):
         attention = (attention_cross + attention_self) / 2
         return attention.matmul(value)
 
-    def forward(self, x1, x2): # The results with and without relu are similar. Without relu, training meets 'nan' in some attemptations. So I add it. 
+    def forward(self, x1, x2): # The results with and without relu are similar. Without relu, training meets 'nan' in some attemptations. 
         B, L, D = x1.shape  
         x1, x2 = torch.permute(x1, (0, 2, 1)), torch.permute(x2, (0, 2, 1))     
         x1, x2 = self.norm1(x1), self.norm2(x2) 

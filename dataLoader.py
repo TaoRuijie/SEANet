@@ -82,7 +82,6 @@ class train_loader(object):
 		noise = audio - label
 		# Select the length
 		start_face = int(random.random()*((all_length - self.length) * 25))
-		# start_face = 0
 		start_audio = start_face * 640
 		audio = audio[start_audio:start_audio + int(self.length * 16000)]
 		label = label[start_audio:start_audio + int(self.length * 16000)]
