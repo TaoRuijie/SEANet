@@ -3,7 +3,7 @@
 *.pth
 *.wav
 *.mp4
-*.txt
+# *.txt
 *.pcm
 data/
 configs/exps
